@@ -2,6 +2,7 @@ import stack.Stack;
 import linked_list.LinkedList;
 import linked_list.DoublyLinkedList;
 import queues.LinkedListQueue;
+import queues.ArrayQueue;
 
 public class Main {
     static void implementStack() {
@@ -71,10 +72,34 @@ public class Main {
         System.out.println("--------------------");
     }
 
+    static void implementArrayQueue() {
+        ArrayQueue queue = new ArrayQueue(10);
+
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+
+        queue.display();
+        System.out.println("--------------------");
+
+        queue.dequeue();
+
+        queue.display();
+        System.out.println("--------------------");
+
+        queue.enqueue(5);
+        queue.enqueue(6);
+
+        queue.display();
+        System.out.println("--------------------");
+    }
+
     public static void main(String[] args) {
 //        Main.implementStack();
 //        Main.implementLinkedList();
 //        Main.implementDoublyLinkedList();
-        Main.implementLinkedListQueue();
+//        Main.implementLinkedListQueue();
+        Main.implementArrayQueue();
     }
 }
